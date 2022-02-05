@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Admin, Resource } from 'react-admin';
+import { fetchUtils, Admin, Resource } from 'react-admin';
+// import simpleRestProvider from 'ra-data-simple-rest';
 
 // Files
 import { PostList, PostEdit, PostCreate  } from './components/posts';
@@ -15,6 +16,18 @@ import UserIcon from '@material-ui/icons/Group';
 // import jsonServerProvider from 'ra-data-json-server';
 
 // const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
+
+// const httpClient = (url, options = {}) => {
+//   if (!options.headers) {
+//       options.headers = new Headers({ Accept: 'application/json' });
+//   }
+//   const { token } = JSON.parse(localStorage.getItem('auth'));
+//   options.headers.set('Authorization', `Bearer ${token}`);
+//   return fetchUtils.fetchJson(url, options);
+// };
+// const dataProvider = simpleRestProvider('http://localhost:3000', httpClient);
+
+
 const App = () => (
   <Admin dashboard={Dashboard} authProvider={authProvider} dataProvider={dataProvider}>
     <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon} />
