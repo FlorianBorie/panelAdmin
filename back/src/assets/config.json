@@ -1,0 +1,19 @@
+{
+    "rootAPI": "/api/",
+    "port": 8080,
+    "db": {
+      "host": "127.0.0.1",
+      "port": 3306,
+      "database": "client",
+      "user": "root",
+      "password": "root",
+      "socketPath": "/Applications/MAMP/tmp/mysql/mysql.sock"
+    },
+    "errors" : {
+      "wrongID": "ID inconnu",
+      "wrongMaxValue": "valeur max dépassé",
+      "mailAlreadyTaken": "mail déjà utilisé !",
+      "noNameValue": "Aucun mail correspond",
+      "sameName": "même mail"
+    }
+  }
