@@ -4,6 +4,8 @@ const mysql = require('promise-mysql');
 const bodyParser = require('body-parser');
 const express = require("express");
 const morgan = require('morgan')('dev')
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./src/assets/swagger.json');
 const config = require('./src/assets/config.json')
 
 mysql.createConnection({
@@ -24,6 +26,7 @@ mysql.createConnection({
     app.use(morgan)
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
+    app.use(config.rootAPI+'api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 
     Routes.route('/:id')

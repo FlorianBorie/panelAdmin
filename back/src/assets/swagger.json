@@ -1,0 +1,110 @@
+{
+  "info": {
+    "title": "API REST documentation",
+    "version": "1.0.0",
+    "license": {
+      "name": "ISC"
+    },
+    "description": "API REST pour gérer les clients"
+  },
+  "basePath": "/api/v1",
+  "host": "localhost:8080",
+  "tags": [
+    {
+      "name": "clients",
+      "description": "Méthodes permettant de gérer les clients"
+    }
+  ],
+  "paths": {
+    "clients/{id}": {
+      "get": {
+        "tags": ["clients"],
+        "summary": "clients/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ]
+      },
+      "put": {
+        "tags": ["clients"],
+        "summary": "clients/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ]
+      },
+      "delete": {
+        "tags": ["clients"],
+        "summary": "clients/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ]
+      }
+    },
+    "members": {
+      "get": {
+        "tags": ["clients"],
+        "summary": "clients",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "max",
+            "in": "query",
+            "required": false
+          }
+        ]
+      },
+      "post": {
+        "tags": ["clients"],
+        "summary": "clients",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "nom",
+            "in": "body",
+            "required": true
+          },
+          {
+            "name": "prenom",
+            "in": "body",
+            "required": true
+          },
+          {
+            "name": "mail",
+            "in": "body",
+            "required": true
+          },
+          {
+            "name": "tel",
+            "in": "body",
+            "required": true
+          }
+        ]
+      }
+    }
+  },
+  "swagger": "2.0"
+}
